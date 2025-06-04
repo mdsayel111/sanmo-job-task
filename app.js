@@ -2,6 +2,8 @@
 
 const setWindowWidthAndHeight = () => {
   const windowWidth = window.innerWidth;
+  console.log(windowWidth);
+
   const windowHeight = window.innerHeight;
   document.documentElement.style.setProperty(
     "--window-width",

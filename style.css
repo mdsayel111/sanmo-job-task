@@ -4,6 +4,8 @@
   --primary-color: #40dde3;
 }
 
+/* global styles */
+
 .orbitron {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
@@ -13,26 +15,71 @@
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
 }
-
-/* body styles */
-body {
-  background-color: #1e1e20;
-  font-family: "DM Sans", sans-serif;
+.left-float-img {
+  position: absolute;
+  left: -10px;
+  top: 15%;
+  z-index: 0;
+  width: 32%;
 }
-body {
-  background-image: linear-gradient(to right, #40dee321 0.5px, transparent 1px),
-    linear-gradient(to bottom, #40dee321 0.5px, transparent 1px);
-  background-size: calc(var(--window-width) * 15px)
-    calc(var(--window-width) * 15px);
+.right-float-img {
+  position: absolute;
+  right: -10px;
+  top: 47%;
+  z-index: 0;
+  width: 25%;
 }
 
+.blur-bg {
+  background-color: #12121373;
+  backdrop-filter: blur(10px);
+  border: 1px solid #d9d9d93b;
+  border-radius: 10px;
+}
 .container {
   width: 95%;
   margin: 0 auto;
 }
 .section-container {
-  width: 88%;
+  width: 80%;
   margin: 0 auto;
+}
+
+.section-btn {
+  color: var(--primary-color);
+  font-size: calc(var(--window-width) * 1px);
+  padding: 0.8% 3%;
+  border-radius: 99999px;
+  border: var(--primary-color) 1px solid;
+  font-weight: 500;
+  margin: 0 auto;
+  width: fit-content;
+  display: block;
+  margin-bottom: 5%;
+  background-color: transparent;
+}
+
+.card-title {
+  font-size: calc(var(--window-width) * 1px);
+  color: white;
+}
+
+.card-description {
+  color: #999999;
+  font-size: calc(var(--window-width) * 0.8px);
+}
+
+/* body styles */
+body {
+  background-color: #1e1e20;
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+  background-image: linear-gradient(to right, #40dee321 0.5px, transparent 1px),
+    linear-gradient(to bottom, #40dee321 0.5px, transparent 1px);
+  background-size: calc(var(--window-width) * 15px)
+    calc(var(--window-width) * 15px);
+  margin: 0;
+  padding: 0;
 }
 
 /* navbar styles */
@@ -62,64 +109,53 @@ body {
 }
 
 .hero-contents-container {
-  background-color: rgba(0, 0, 0, 0.041);
-  /* backdrop-filter: blur(10px); */
-  width: 65%;
+  width: 51%;
+  aspect-ratio: 1155/720;
   margin: 0 auto;
-  border: 0.2px solid #d9d9d998;
   padding: 6% 4% 0 4%;
-  border-radius: 10px;
   margin-top: 5%;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 .hero-contents {
-  position: relative;
+  position: absolute;
   z-index: 10;
+  left: 25%;
+  bottom: 8%;
 }
 
-.hero-xp-image {
+.hero-xp-image-left {
   width: 20%;
   position: absolute;
-  right: 8%;
+  left: 10%;
+  top: 55%;
+  z-index: 1;
+}
+.hero-xp-image-right {
+  width: 20%;
+  position: absolute;
+  right: 16%;
   top: -1%;
   z-index: 5;
 }
 
-.hero-left-box {
-  width: 52.3vw;
-  aspect-ratio: 15/9.4;
+.hero-left-box.blur-bg {
+  width: 53.5vw;
+  aspect-ratio: 15/8.65;
   position: absolute;
-  left: 45%;
+  left: 46%;
   top: 6%;
-  border: 0.5px solid #d9d9d998;
-  border-radius: 6px;
-  z-index: 1;
-  background-color: red;
+  margin: 0 auto;
+  border-radius: 6px 0px 0px 6px;
+  z-index: 2;
+  background-color: #12121328;
 }
-/* 
-.hero-left-box-remove-border {
-  width: 52.3vw;
-  aspect-ratio: 15/9.4;
-  position: absolute;
-  left: 45%;
-  top: 6%;
-  border: 0.5px solid #d9d9d998;
-  border-radius: 6px;
-  z-index: 4;
-  background-color: #12121302;
-  backdrop-filter: blur(2px);
-} */
-/* .hero-left-box-remove-border {
-  width: 0px;
-  height: 83.4%;
-  position: absolute;
-  right: 0;
-  transform: translateX(70%);
-  top: 6.3%;
-  z-index: 4;
-  border: 2px solid #1e1e20;
-} */
+
+.hero-bottom-img {
+  width: 62%;
+  margin: 0 auto;
+  display: block;
+}
 
 .hero-title {
   font-size: calc(var(--window-width) * 4px);
@@ -163,6 +199,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 7%;
+  transform: translateX(-50%);
 }
 .tab-icon {
   width: 23%;
@@ -201,7 +238,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 60%;
   background: transparent;
   border: 1px solid #404040;
   margin: 0 auto 2% auto;
@@ -232,4 +269,115 @@ body {
   border-radius: 5px;
   border: none;
   font-weight: 500;
+}
+
+/* meet section styles */
+.meeting-container {
+  padding: 2%;
+  margin: 10% auto 10% auto;
+}
+.meet-btn {
+  color: var(--primary-color);
+  font-size: calc(var(--window-width) * 1px);
+  padding: 0.8% 3%;
+  border-radius: 99999px;
+  border: var(--primary-color) 1px solid;
+  font-weight: 500;
+  margin: 0 auto;
+  width: fit-content;
+  display: block;
+  margin-bottom: 5%;
+  background-color: transparent;
+}
+
+.meeting-container p {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  font-size: calc(var(--window-width) * 1.4px);
+  font-weight: 200;
+}
+
+.meeting-container p:last-of-type {
+  margin-top: 2%;
+}
+
+/* features section styles */
+.features-container {
+  padding: 2% 8%;
+  margin: 10% auto 10% auto;
+}
+
+.features-card-container {
+  margin: 5% auto;
+}
+.features-title {
+  text-align: center;
+  font-size: calc(var(--window-width) * 0.6px);
+  color: var(--primary-color);
+}
+
+.features-subtitle {
+  text-align: center;
+  color: white;
+  font-size: calc(var(--window-width) * 1px);
+}
+.features-first-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5%;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.features-card {
+  position: relative;
+  padding: 5%;
+  border: 1px solid #d9d9d93b;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.37);
+}
+
+.features-card-top-corner-icon {
+  width: 30px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.features-first-row .features-card .features-card-img {
+  width: 50%;
+  top: 0;
+  left: 0;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.features-second-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5%;
+  width: 100%;
+}
+
+.features-second-row .features-card {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.features-second-row .features-card .features-card-img {
+  justify-self: center;
+  width: 40%;
+}
+
+.features-second-row .features-card .features-card-content {
+  align-self: end;
+}
+
+/* how to use section styles */
+.section-btn.how-to-use-btn {
+  background-color: #121213;
 }
