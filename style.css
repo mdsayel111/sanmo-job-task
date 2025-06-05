@@ -39,11 +39,12 @@
   display: block;
   margin-bottom: 5%;
   background-color: transparent;
+  cursor: pointer;
 }
 .section-subtitle {
   text-align: center;
-  color: white;
-  font-size: calc(var(--window-width) * 1px);
+  color: rgba(255, 255, 255, 0.63);
+  font-size: calc(var(--window-width) * 1.3px);
 }
 .card {
   padding: 5%;
@@ -90,12 +91,15 @@
 .input {
   background-color: transparent;
   border: none;
-  color: rgba(255, 255, 255, 0.637);
+  color: white;
   font-size: calc(var(--window-width) * 1px);
   padding: 0.5% 1%;
   font-family: "DM Sans", sans-serif;
   font-weight: 300;
   margin-left: 5%;
+}
+input:focus {
+  outline: none;
 }
 .input::placeholder {
   color: white;
@@ -108,6 +112,25 @@
   border-radius: 5px;
   border: none;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.left-float-img {
+  z-index: 0;
+  width: 32.2%;
+  height: calc(var(--window-width) * 16.7px);
+  object-fit: fill;
+  position: absolute;
+  left: 0px;
+}
+
+.right-float-img {
+  z-index: 0;
+  width: 23.4%;
+  height: calc(var(--window-width) * 16.7px);
+  object-fit: fill;
+  position: absolute;
+  right: 1.7%;
 }
 
 /* body styles */
@@ -127,23 +150,35 @@ body {
 }
 
 /* float images  styles */
+.container-with-float-imgs {
+  position: relative;
+}
+
 .left-float-img-1 {
-  position: absolute;
-  left: 0px;
   top: 10.5%;
-  z-index: 0;
-  width: 32.2%;
-  height: calc(var(--window-width) * 16.7px);
-  object-fit: fill;
 }
 .right-float-img-1 {
-  position: absolute;
-  right: 1.7%;
   top: 48.5%;
-  z-index: 0;
-  width: 23.4%;
-  height: calc(var(--window-width) * 16.7px);
-  object-fit: fill;
+}
+.left-float-img-2 {
+  top: 10.5%;
+}
+.right-float-img-2 {
+  top: 20.5%;
+}
+
+.left-float-img-3 {
+  top: 40.5%;
+}
+.right-float-img-3 {
+  top: 60.5%;
+}
+
+.left-float-img-4 {
+  top: 79.5%;
+}
+.right-float-img-4 {
+  top: 89.5%;
 }
 
 /* navbar styles */
@@ -165,6 +200,7 @@ body {
   border-radius: 5px;
   border: none;
   font-size: calc(var(--window-width) * 1px);
+  cursor: pointer;
 }
 
 /* hero styles */
@@ -212,7 +248,7 @@ body {
   width: 20%;
   position: absolute;
   left: 10%;
-  top: 55%;
+  top: 35%;
   z-index: 1;
 }
 .hero-xp-image-right {
@@ -302,7 +338,7 @@ body {
 
 /* meet section styles */
 .meeting-container {
-  padding: 2%;
+  padding: 2% 2%;
   margin: 10% auto 10% auto;
 }
 .meet-btn {
@@ -317,10 +353,11 @@ body {
   display: block;
   margin-bottom: 5%;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .meeting-container p:last-of-type {
-  margin-top: 2%;
+  margin-top: 4%;
 }
 
 /* features section styles */
@@ -387,6 +424,7 @@ body {
 /* how to use section styles */
 .section-btn.how-to-use-btn {
   background-color: #121213;
+  cursor: pointer;
 }
 
 .how-to-use-card-container {
@@ -415,6 +453,7 @@ body {
 
 .partners-container .section-btn {
   margin-bottom: 3%;
+  cursor: pointer;
 }
 
 .partners-card-container {
@@ -431,6 +470,62 @@ body {
   display: block;
   margin: 5% auto 5% auto;
   margin: 0 auto;
+}
+
+/* faq section styles */
+.faq-btn {
+  background-color: #121213;
+  cursor: pointer;
+}
+.faq-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2%;
+  row-gap: 7%;
+}
+
+.faq-card-container .card {
+  padding: 1% 3%;
+}
+.faq-card-container .card:first-of-type {
+  grid-row: span 2;
+}
+
+.faq-container {
+  margin: 10% auto 10% auto;
+}
+
+.faq-container .section-subtitle {
+  margin-bottom: 5%;
+}
+
+.faq-card-container .card:first-of-type p:first-of-type {
+  color: var(--primary-color);
+}
+
+.faq-card-container .card p {
+  font-size: calc(var(--window-width) * 1.2px);
+  color: white;
+  margin-bottom: 2%;
+  font-weight: 200;
+}
+
+.faq-card-container .card:first-of-type p:last-of-type {
+  font-size: calc(var(--window-width) * 1px);
+  color: white;
+}
+
+.faq-card-close-icon {
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  width: 20px;
+  rotate: 45deg;
+  color: var(--primary-color);
+  font-size: calc(var(--window-width) * 1.7px);
+  font-weight: 200;
+  cursor: pointer;
 }
 
 /* bottom section styles */
