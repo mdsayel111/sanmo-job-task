@@ -15,7 +15,7 @@
 }
 .blur-bg {
   background-color: #12121373;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
   border: 1px solid #d9d9d93b;
   border-radius: 10px;
 }
@@ -192,6 +192,20 @@ body {
   position: absolute;
   top: -25%;
   left: 17%;
+  z-index: 0;
+}
+.gredient-left-img {
+  width: 20%;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+  z-index: 0;
+}
+.gredient-right-img {
+  width: 20%;
+  position: absolute;
+  right: 25%;
+  top: 20%;
   z-index: 0;
 }
 .hero-xp-image-left {

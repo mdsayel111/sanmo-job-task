@@ -1,6 +1,7 @@
 // set window width and height to variables for daynamic styling
 
 const setWindowWidthAndHeight = () => {
+  // const windowWidth = document.documentElement.clientWidth;
   const windowWidth = document.documentElement.clientWidth;
   console.log(windowWidth);
 
