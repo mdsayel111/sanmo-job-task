@@ -138,10 +138,10 @@ body {
 }
 .right-float-img-1 {
   position: absolute;
-  right: 0.9%;
-  top: 49%;
+  right: 1.7%;
+  top: 48.5%;
   z-index: 0;
-  width: 23.3%;
+  width: 23.4%;
   height: calc(var(--window-width) * 16.7px);
   object-fit: fill;
 }
